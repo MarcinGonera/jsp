@@ -24,9 +24,15 @@
 <p>Server port: ${pageContext.request.serverPort}</p>
 <p>Request URI: ${pageContext.request.requestURI}</p>
 
+
+
 <p>Licznik odwiedzin: <%=++visitCounter %></p>
 <%-- komnetarz JSP --%>
 <!-- komentarz HTML -->
+    <jsp:forward page="redirected.jsp">
+<jsp:param name="myParam" value= "my value"/>
+</jsp:forward>
+
 </body>
 </html>
 

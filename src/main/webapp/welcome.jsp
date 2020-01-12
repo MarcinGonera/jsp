@@ -18,8 +18,15 @@
     <% String nowString = LocalDateTime.now().toString();
         out.print(nowString);
     %>
+
 </h1>
+<p>Server name: ${pageContext.request.serverName}</p>
+<p>Server port: ${pageContext.request.serverPort}</p>
+<p>Request URI: ${pageContext.request.requestURI}</p>
+
 <p>Licznik odwiedzin: <%=++visitCounter %></p>
+<%-- komnetarz JSP --%>
+<!-- komentarz HTML -->
 </body>
 </html>
 

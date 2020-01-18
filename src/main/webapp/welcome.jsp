@@ -12,26 +12,19 @@
     <title>Hello World</title>
 </head>
 <body>
-<h1>
-    <% out.print("Hello World"); %>
-    Dzisiaj jest: <%= java.time.LocalDateTime.now().toString()%>
-    <% String nowString = LocalDateTime.now().toString();
-        out.print(nowString);
-    %>
+<h2>Parametry wyszukiwania</h2>
+<form action="search.jsp" method="get">
+    <label>Szukane słowo<input type="text" name="query"></label>
+    <label>Strona nr: <input type="number" name="page">
+    </label>Sortowanie :
+    <select name="sort">
+        <option value="asc">rosnąco</option>
+        <option value="desc">malejąco</option>
+    </select>
+    </label>
+    <input type="submit" value="wyślij"/>
+</form>
 
-</h1>
-<p>Server name: ${pageContext.request.serverName}</p>
-<p>Server port: ${pageContext.request.serverPort}</p>
-<p>Request URI: ${pageContext.request.requestURI}</p>
-
-
-
-<p>Licznik odwiedzin: <%=++visitCounter %></p>
-<%-- komnetarz JSP --%>
-<!-- komentarz HTML -->
-    <jsp:forward page="redirected.jsp">
-<jsp:param name="myParam" value= "my value"/>
-</jsp:forward>
 
 </body>
 </html>

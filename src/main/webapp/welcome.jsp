@@ -13,7 +13,7 @@
 </head>
 <body>
 <h2>Parametry wyszukiwania</h2>
-<form action="search.jsp" method="get">
+<form action="search.jsp" method="post">
     <label>Szukane słowo<input type="text" name="query"></label>
     <label>Strona nr: <input type="number" name="page">
     </label>Sortowanie :

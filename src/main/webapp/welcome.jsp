@@ -9,20 +9,18 @@
 <%!private long visitCounter = 0; %>
 <html>
 <head>
-    <title>Hello World</title>
+    <title>Obsługa sesji</title>
 </head>
 <body>
-<h2>Obsługa Cookie</h2>
-<%
-    int searchId = 123456;
-    Cookie cookie = new Cookie("searchId", String.valueOf(searchId));
-    cookie.setMaxAge(60 * 60 * 24);
-    response.addCookie(cookie);
+<h2>Obsługa sesji</h2>
 
-    Cookie usernameCookie = new Cookie("username", "MyUserName");
-    response.addCookie(usernameCookie);
+<%
+    request.getSession().invalidate();
+    HttpSession actualSession = request.getSession();
+    actualSession.setAttribute("userId", 123456);
 %>
-<a href="search.jsp">search...</a>
+
+<a href="session.jsp">session...</a>
 
 </body>
 </html>
